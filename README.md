@@ -10,14 +10,18 @@ Requerimientos:
   con únicamente el Toolchain de Espressif.
 - [Hal de Espressif](https://github.com/zephyrproject-rtos/hal_espressif) solo para ESP32-S3 (MCU Xtensa)
 
+
 Partimos de la documentación oficial [Getting Started Guide](https://docs.zephyrproject.org/4.3.0/develop/getting_started/index.html)
+
 1. Instalar dependencias usando [winget](https://learn.microsoft.com/en-us/windows/package-manager/ "Instalar el gestor de paquetes winget").
-   > winget install Kitware.CMake Ninja-build.Ninja oss-winget.gperf Python.Python.3.12 Git.Git oss-winget.dtc wget 7zip.7zip
+`
+    winget install Kitware.CMake Ninja-build.Ninja oss-winget.gperf Python.Python.3.12 Git.Git oss-winget.dtc wget 7zip.7zip
+`
   (el directorio a 7z.exe lo has de añadir manualmente a tu PATH)
-2. Montar el entorno virtual de Phyton y descargar _west_
+3. Montar el entorno virtual de Phyton y descargar _west_
     1. Abre un PowerShell, y ponte en tu _Home directory_ o en el que de tu carpeta de desarrollo (para el Workspace de west usaremos el directorio con nombre _zephyr.esp32s3_)
      `cd $Env:HOMEPATH
-     python -m venv zephyr.esp32s3\.venv`
+         python -m venv zephyr.esp32s3\.venv`
     2. Tenemos que permitir la ejecución de scripts en la sesión
      `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser`
     3. Activamos el entorno virtual de Python
