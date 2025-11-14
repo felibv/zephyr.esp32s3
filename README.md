@@ -20,12 +20,12 @@ Partimos de la documentación oficial [Getting Started Guide](https://docs.zephy
   (el directorio a 7z.exe lo has de añadir manualmente a tu PATH)
   
 2. Montar el entorno virtual de Phyton y descargar _west_
-    1. Abre un PowerShell, y ponte en tu _Home directory_ o en el que de tu carpeta de desarrollo (para el Workspace de west usaremos el directorio con nombre _zephyr.esp32s3_)
+    1. Abre un PowerShell, y ponte en tu _Home directory_ o en tu carpeta de desarrollo (para el Workspace de west usaremos el directorio con nombre _zephyr.esp32s3_)
     ```
      cd $Env:HOMEPATH
      python -m venv zephyr.esp32s3\.venv
     ```
-    2. Tenemos que permitir la ejecución de scripts en la sesión
+    2. Tenemos que permitir la ejecución de scripts en la sesión de Powershell
     ```
      Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
     ```
@@ -39,3 +39,11 @@ Partimos de la documentación oficial [Getting Started Guide](https://docs.zephy
     ```
   
 Ahora es cuando empezamos con la magia.
+
+3. Baja el fichero manifest_min_esp32s3.yml de este repositorio y ponlo en el directorio zephyr.esp32s3
+4. Ejecuta en el directorio zephyr.esp32s3\ el comando para inicializar el workspace de west
+```
+   cd ~/zephur.esp32s3
+   west init -l . --manifest-file=manifest_min_esp32s3.yml
+```
+5. 
