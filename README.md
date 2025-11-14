@@ -15,14 +15,14 @@ Partimos de la documentación oficial [Getting Started Guide](https://docs.zephy
    > winget install Kitware.CMake Ninja-build.Ninja oss-winget.gperf Python.Python.3.12 Git.Git oss-winget.dtc wget 7zip.7zip
   (el directorio a 7z.exe lo has de añadir manualmente a tu PATH)
 2. Montar el entorno virtual de Phyton y descargar _west_
-  1. Abre un PowerShell, y ponte en tu _Home directory_ o en el que de tu carpeta de desarrollo (para el Workspace de west usaremos el directorio con nombre _zephyr.esp32s3_)
-   > cd $Env:HOMEPATH
-   > python -m venv zephyr.esp32s3\.venv
-  2. Tenemos que permitir la ejecución de scripts en la sesión
-   > Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
-  3. Activamos el entorno virtual de Python
-   > zephyr.esp32s3\.venv\Scripts\Activate.ps1
-  4. Insalamos _West_
-   > pip install west
+    1. Abre un PowerShell, y ponte en tu _Home directory_ o en el que de tu carpeta de desarrollo (para el Workspace de west usaremos el directorio con nombre _zephyr.esp32s3_)
+     `cd $Env:HOMEPATH
+     python -m venv zephyr.esp32s3\.venv`
+    2. Tenemos que permitir la ejecución de scripts en la sesión
+     `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser`
+    3. Activamos el entorno virtual de Python
+   `zephyr.esp32s3\.venv\Scripts\Activate.ps1`
+    4. Insalamos _West_
+   `pip install west`
 
 Ahora es cuando empezamos con la magia.
