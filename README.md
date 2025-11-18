@@ -1,4 +1,4 @@
-# Desarollo en Zephyr para ESP32-S3
+# Desarrollo en Zephyr para el ESP32-S3
 Configuración de Zephyr RTOS mínimo para Espressif ESP32-S3, sin sobrecarga y rápido.
 
 El objetivo es tener un Workspace de Zephyr para desarrollo con el SoC de Espressif ESP32-S3, que ocupe lo mínimo y que sea rápido de montar.
@@ -47,7 +47,7 @@ Ahora es cuando empezamos con la magia.
    cd ~/zephyr.esp32s3
    west init -l --manifest-file=manifest_min_esp32s3.yml zephyr
 ```
-5. Descarga el repositorio con Zephyr RTOS v4.3.0 con
+6. Descarga el repositorio con Zephyr RTOS v4.3.0 con
 ```
    west update
 ```
