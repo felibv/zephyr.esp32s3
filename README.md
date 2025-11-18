@@ -49,5 +49,23 @@ Ahora es cuando empezamos con la magia.
 ```
 6. Descarga el repositorio con Zephyr RTOS v4.3.0 con
 ```
-   west update
+   west update --narrow
 ```
+7. Descarga la versión del SDK (según el fichero  ${ZEPHYR_BASE}/SDK_VERSION)
+```
+  cd .\zephyr
+  west sdk install --install-base . --toolchains xtensa-espressif_esp32s3_zephyr-elf
+```
+8. Conecta CMake con Zephyr
+```
+   west zephyr-export
+```
+9. Instala las dependencias de python
+```
+   west packages pip --install
+```
+10. Descarga el toolchain de Espressif para el ESP32-S3
+```
+   west blobs fetch hal_espressif --allow-regex 'lib/esp32s3'
+```
+11. 
