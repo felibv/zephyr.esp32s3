@@ -40,10 +40,14 @@ Partimos de la documentación oficial [Getting Started Guide](https://docs.zephy
   
 Ahora es cuando empezamos con la magia.
 
-3. Baja el fichero manifest_min_esp32s3.yml de este repositorio y ponlo en el directorio zephyr.esp32s3
-4. Ejecuta en el directorio zephyr.esp32s3\ el comando para inicializar el workspace de west
+3. Crea en _zephyr.esp32s3_ un subdirectorio para tu aplicación para el ESP32-S3, por ejemplo "_application_".
+4. Baja el fichero manifest_min_esp32s3.yml de este repositorio y copialo en el directorio "_application\__"
+5. Ejecuta en el directorio zephyr.esp32s3\ el comando para inicializar el workspace de west
 ```
-   cd ~/zephur.esp32s3
-   west init -l . --manifest-file=manifest_min_esp32s3.yml
+   cd ~/zephyr.esp32s3
+   west init -l --manifest-file=manifest_min_esp32s3.yml zephyr
 ```
-5. 
+5. Descarga el repositorio con Zephyr RTOS v4.3.0 con
+```
+   west update
+```
